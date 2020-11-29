@@ -1,0 +1,25 @@
+# Determine the contellation center. This information will be
+# usefull when rendering constellations in maps.
+dec_deg_max = -90
+dec_deg_min = 90
+ra_deg_max = -360 * 2
+ra_deg_min = 360 * 2
+for boundarie in boundaries_j2000:
+    dec_deg_max = max(boundarie["dec_deg"], dec_deg_max)
+    dec_deg_min = min(boundarie["dec_deg"], dec_deg_min)
+    print((boundarie["ra_deg"] % 360) // 90)
+# Prepare the center and limits data for the current constellation
+center_j2000 = {
+    "ra_deg": (ra_deg_min + (ra_deg_max - dec_deg_min) / 2) % 360,
+    "dec_deg": (dec_deg_min + (dec_deg_max - dec_deg_min) / 2)
+}
+limits_j2000 = {
+    "ra_deg_min": ra_deg_min % 360,
+    "ra_deg_max": ra_deg_max % 360,
+    "dec_deg_min": dec_deg_min,
+    "dec_deg_max": dec_deg_max
+}
+
+
+            # "center_j2000": center_j2000,
+            # "limits_j2000": limits_j2000}

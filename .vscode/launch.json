@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
+            "name": "Python: sky_draw.py",
+            "type": "python",
+            "request": "launch",
+            "program": "./src/py/sky_draw.py",
+            "console": "integratedTerminal",
+            "args": [
+                // Image geometry
+                "--width-px=1920",
+                "--height-px=1080",
+                // Center at
+                "--center-at=constellation", //  constellation or free
+                // Center on a constellation/part
+                "--constellation=Ori",
+                "--constellation-part=0",
+                // Center on a RA/Dec point
+                "--ra-center-deg=0",
+                "--dec-center-deg=0",
+                "--fov-deg=50",
+                // Colors                
+                "--sky-color=(0, 0, 0)",
+                "--centroid-color=(255, 0, 255)",
+                "--constellation-lines-color=(100, 100, 100)",
+                "--constellation-boundaries-color=(128, 0, 0)",
+                "--stars-color=real", // real or (r, g, b)
+                "--ra-dec-lines-color=(60, 60, 60)",
+                // RA/Dec lines
+                "--ra-grid-spacing-deg=15",
+                "--dec-grid-spacing-deg=10",
+                // Show/hide graphics
+                "--show-stars-greek=False",
+                "--show-stars-name=False",
+                "--show-constellations-name=False",
+                "--show-ra-dec-lines=True",
+                "--show-centroid=True",
+                "--show-constellations-line=True",
+                "--show-constellations-boundarie=False",
+            ]
+        }
+    ]
+}

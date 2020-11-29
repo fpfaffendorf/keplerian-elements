@@ -1,0 +1,14 @@
+{
+    "general": {
+        "mongodb_connection_string": "mongodb+srv://"
+    },
+    "constellations": {
+        "stellarium_names": "https://raw.githubusercontent.com/Stellarium/stellarium/master/skycultures/western/constellation_names.eng.fab",
+        "stellarium_lines": "https://raw.githubusercontent.com/Stellarium/stellarium/master/skycultures/western/constellationship.fab",
+        "iau_boundaries_url": "https://www.iau.org/static/public/constellations/txt/"
+    },
+    "catalogs": {
+        "common_names": "https://raw.githubusercontent.com/Stellarium/stellarium/master/skycultures/western/star_names.fab",
+        "greek_letters": "https://raw.githubusercontent.com/Stellarium/stellarium/master/stars/default/name.fab"
+    }
+}
